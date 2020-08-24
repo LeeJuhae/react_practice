@@ -2,7 +2,7 @@ import React from 'react';
 
 class Square extends React.Component {
 	onClick = () => {
-		this.props.onClick(this.props.i);
+		this.props.onClick(this.props.idx);
 	}
 	render() {
 		return (
