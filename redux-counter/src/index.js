@@ -4,8 +4,13 @@ import './index.css';
 import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
 
+import { createStore } from 'redux';
+import reducers from './reducres';
+
+const store = createStore(reducers);
+
 ReactDOM.render(
-  <App />,
+  <App/>,
   // <React.StrictMode>
   //   <App />
   // </React.StrictMode>,
