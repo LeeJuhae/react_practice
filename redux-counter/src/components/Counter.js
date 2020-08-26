@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Counter.css';
+import './Counter.css'
 
 const Counter = ({number, color, onIncrement, onDecrement, onSetColor}) => {
 	return (
@@ -18,15 +18,15 @@ const Counter = ({number, color, onIncrement, onDecrement, onSetColor}) => {
 			{number}
 		</div>
 	);
-};
+}
 
-Counter.prototype = {
+Counter.propTypes = {
 	number: PropTypes.number,
 	color: PropTypes.string,
 	onIncrement: PropTypes.func,
 	onDecrement: PropTypes.func,
 	onSetColor: PropTypes.func
-};
+}
 
 Counter.defaultProps = {
 	number: 0,
@@ -34,6 +34,6 @@ Counter.defaultProps = {
 	onIncrement: () => console.warn('onIncrement not defined'),
 	onDecrement: () => console.warn('onDecrement not defined'),
 	onSetColor: () => console.warn('onSetColor not defined')
-};
+}
 
 export default Counter;
