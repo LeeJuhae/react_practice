@@ -1,15 +1,38 @@
 import React, { Component } from 'react';
 import PhoneForm from './components/PhoneForm';
+import PhoneInfoList from './components/PhoneInfoList';
 
 class App extends Component {
+  id = 2
+  state = {
+    information: [
+      {
+        id: 0,
+        name: 'juhae',
+        phone: '010-2220-2457'
+      },
+      {
+        id: 1,
+        name: 'lee',
+        phone: '010-2220-2458'
+      }
+    ]
+  }
   handleCreate = (data) => {
-    console.log(data);
+    const { information } = this.state;
+    this.setState({
+      information: information.concat({id: this.id++, ...data})
+    })
   }
   render () {
+    const { information } = this.state;
     return (
-      <PhoneForm
-        onCreate={this.handleCreate}
-      />
+      <div>
+        <PhoneForm
+          onCreate={this.handleCreate}
+        />
+        <PhoneInfoList data={information} />
+      </div>
     );
   }
 }
