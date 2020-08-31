@@ -5,7 +5,7 @@ export const increment = () => ({
 });
 
 export const decrement = () => ({
-	type: types. DECREMENT
+	type: types.DECREMENT
 });
 
 export const setColor = (color) => ({
