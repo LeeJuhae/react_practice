@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import PhoneInfo from './PhoneInfo';
 
 class PhoneInfoList extends Component {
+	shouldComponentUpdate(nextProps, nextState) {
+		return nextProps.data !== this.props.data
+	}
 	render(){
 		const { data, onRemove, onUpdate } = this.props;
 		const list = data.map(
