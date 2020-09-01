@@ -11,7 +11,7 @@ const initialState = {
 
 function counter(state=initialState, action) {
 	const { counters } = state;
-	switch(action.types) {
+	switch(action.type) {
 		case types.CREATE:
 			return {
 				counters: [
